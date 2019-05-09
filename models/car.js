@@ -17,7 +17,7 @@ const carSchema = new mongoose.Schema({
     },
 
     year: {
-        type: String,
+        type: Number,
         required: true
     },
 
@@ -27,7 +27,7 @@ const carSchema = new mongoose.Schema({
     }, 
 
     currentKilometers: {
-        type: String,
+        type: Number,
         required: true
     },
     

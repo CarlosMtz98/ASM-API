@@ -18,12 +18,14 @@ router.post('/new-car-for/:clientId', [
         .trim()
         .isLength({ min: 1 }),
     body('year')
+        .isNumeric()
         .trim()
-        .isLength({ min: 1 }),
+        .isLength({ min: 4 }),
     body('licencePlate')
         .trim()
         .isLength({ min: 1 }),
     body('currentKilometers')
+        .isNumeric()
         .trim()
         .isLength({ min: 1 })
         
