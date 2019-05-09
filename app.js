@@ -8,6 +8,7 @@ const app = express();
 const startupRoutes = require('./routes/startup');
 const authRoutes = require('./routes/auth');
 const clientsRoutes = require('./routes/clients');
+const carsRoutes = require('./routes/cars');
 
 const fileStorage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -47,7 +48,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/feed', startupRoutes);
-app.use('/clients', clientsRoutes)
+app.use('/clients', clientsRoutes);
+app.use('/cars', carsRoutes);
 app.use('/auth', authRoutes);
 
 app.use((error, req, res, next) => {

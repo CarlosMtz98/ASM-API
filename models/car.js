@@ -17,7 +17,7 @@ const carSchema = new mongoose.Schema({
     },
 
     year: {
-        type: Number,
+        type: String,
         required: true
     },
 
@@ -39,6 +39,6 @@ const carSchema = new mongoose.Schema({
     { timestamps: true }
 );
 
-const Car = new mongoose.model('Car');
+const Car = new mongoose.model('Car', carSchema);
 
 exports.Car = Car;
