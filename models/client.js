@@ -7,7 +7,7 @@ const clientSchema = new mongoose.Schema({
         required: true
     },
 
-    surenames: {
+    surnames: {
         type: String,
         required: true
     },

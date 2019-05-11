@@ -14,7 +14,7 @@ router.post('/new', [
             .trim()
             .not()
             .isEmpty(),
-        body('surenames')
+        body('surnames')
             .trim()
             .not()
             .isEmpty(),
@@ -53,7 +53,7 @@ router.put('/edit/:clientId', [
         .trim()
         .not()
         .isEmpty(),
-    body('surenames')
+    body('surnames')
         .trim()
         .not()
         .isEmpty(),

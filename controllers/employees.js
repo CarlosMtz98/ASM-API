@@ -34,7 +34,7 @@ exports.createEmployee = (req, res, next) => {
     }
     const employee = new Employee({
         name: req.body.name,
-        surenames: req.body.surenames,
+        surnames: req.body.surnames,
         birthDate: req.body.birthDate,
         genre: req.body.genre,
         rfc: req.body.rfc,
@@ -43,7 +43,7 @@ exports.createEmployee = (req, res, next) => {
         adress: req.body.adress,
         position: req.body.position,
         specialties: req.body.specialties,
-        paysheet: req.body.paysheet
+        paysheet: req.body.paysheet,
     });
 
     employee.save()
@@ -98,7 +98,7 @@ exports.updateEmployee = (req, res, next) => {
                 throw error
             }
             employee.name = req.body.name;
-            employee.surenames = req.body.surenames;
+            employee.surnames = req.body.surnames;
             employee.birthDate = req.body.birthDate;
             employee.genre = req.body.genre;
             employee.rfc = req.body.rfc;

@@ -6,7 +6,7 @@ const employeeSchema = new mongoose.Schema({
         required: true
     },
 
-    surenames: {
+    surnames: {
         type: String,
         required: true
     },
@@ -81,6 +81,12 @@ const employeeSchema = new mongoose.Schema({
             min: 0,
             default: 0
         }
+    },
+
+    active: {
+        type:Boolean,
+        default: false,
+        required: true
     },
 
     workHistory: [{

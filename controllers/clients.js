@@ -26,14 +26,14 @@ exports.createClient = (req, res, next) => {
         throw error;
     }
     const name = req.body.name;
-    const surenames = req.body.surenames;
+    const surnames = req.body.surnames;
     const email = req.body.email;
     const phone = req.body.phone;
     const adress = req.body.adress;
     const cars = []
     const client = new Client({
         name: name,
-        surenames: surenames,
+        surnames: surnames,
         email: email,
         phone: phone,
         adress: adress,
@@ -89,7 +89,7 @@ exports.updatePost = (req, res, next) => {
     }
 
     const name = req.body.name;
-    const surenames = req.body.surenames;
+    const surnames = req.body.surnames;
     const email = req.body.email;
     const phone = req.body.phone;
     const adress = req.body.adress;
@@ -107,7 +107,7 @@ exports.updatePost = (req, res, next) => {
             }
 
             client.name = name;
-            client.surenames = surenames;
+            client.surnames = surnames;
             client.email = email;
             client.phone = phone;
             client.adress = adress;
