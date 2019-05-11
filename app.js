@@ -7,6 +7,7 @@ const app = express();
 
 const startupRoutes = require('./routes/startup');
 const authRoutes = require('./routes/auth');
+const employeesRoutes = require('./routes/employees');
 const clientsRoutes = require('./routes/clients');
 const carsRoutes = require('./routes/cars');
 
@@ -50,6 +51,7 @@ app.use((req, res, next) => {
 app.use('/feed', startupRoutes);
 app.use('/clients', clientsRoutes);
 app.use('/cars', carsRoutes);
+app.use('/employees', employeesRoutes);
 app.use('/auth', authRoutes);
 
 app.use((error, req, res, next) => {
